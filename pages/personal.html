@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Projects — Aster Teshome</title>
+  <link rel="icon" type="image/webp" href="../images/Favicon.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="../index.html" class="nav-logo">✦ Portfolio</a>
+    <div class="nav-links">
+      <a href="../index.html" class="nav-link active">Work</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <a href="../index.html" class="page-back fade-in">← Back to all work</a>
+    <p class="page-eyebrow fade-in">◈ 02 — Category</p>
+    <h1 class="page-title fade-in">Personal <em>Projects</em></h1>
+    <p class="page-desc fade-in">
+      Experiments &amp; Explorations — experimental designs, personal branding concepts, and creative side projects born from pure curiosity. This is where the rules bend.
+    </p>
+  </header>
+
+  <!-- GALLERY -->
+  <section class="gallery-section">
+    <div class="gallery-grid" id="gallery">
+
+      <div class="gallery-item fade-in" data-index="0"
+           data-title="Belt of Truth"
+           data-tag="Poster · Ministry Work">
+        <img src="../images/P1 belt of truth worked on it based on benaiah ministry.webp"
+             alt="Belt of Truth poster, worked on based on Benaiah Ministry"
+             loading="lazy" />
+        <div class="gallery-item-overlay">
+          <p class="gallery-item-title">Belt of Truth</p>
+          <span class="gallery-item-tag">Poster · Ministry Work</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#8592;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">&#8594;</button>
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">✦ Portfolio — 2026</span>
+      <span class="footer-tagline">Designed with intention.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="personal.js"></script>
+</body>
+</html>

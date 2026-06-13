@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Aster Teshome</title>
+  <link rel="icon" type="image/webp" href="../images/Favicon.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="../index.html" class="nav-logo">✦ Portfolio</a>
+    <div class="nav-links">
+      <a href="../index.html" class="nav-link">Work</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <a href="../index.html" class="page-back fade-in">← Back to work</a>
+    <p class="page-eyebrow fade-in">Let's talk</p>
+    <h1 class="page-title fade-in">Get in <em>touch.</em></h1>
+    <p class="page-desc fade-in">
+      Have a project in mind, want to collaborate, or just want to say hello? I'd love to hear from you.
+    </p>
+  </header>
+
+  <!-- CONTACT CONTENT -->
+  <section class="contact-grid">
+
+    <!-- Left — info -->
+    <div class="contact-info fade-in">
+      <h2>Let's create something together.</h2>
+      <p>
+        I'm currently open for freelance graphic design work — posters, social media graphics, event branding, and more. Fill in the form or reach me directly.
+      </p>
+
+      <div class="contact-links">
+        <a href="mailto:anketeshome@gmail.com" class="contact-link">
+          <span class="contact-link-icon">✉</span>
+          anketeshome@gmail.com
+        </a>
+        <a href="tel:+251963290455" class="contact-link">
+          <span class="contact-link-icon">✆</span>
+          +251 963 290 455
+        </a>
+      </div>
+
+      <div class="contact-availability">
+        <span class="avail-dot"></span>
+        <span>Available for freelance work</span>
+      </div>
+    </div>
+
+    <!-- Right — form -->
+    <div class="contact-form-wrap fade-in">
+      <form id="contact-form" novalidate>
+
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name"
+                 placeholder="e.g. Sara Haile" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email"
+                 placeholder="sara@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message"
+                    placeholder="Tell me about your project..." required></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary" id="submitBtn">
+            Send Message →
+          </button>
+        </div>
+
+        <!-- Toast confirmation -->
+        <div class="form-toast" id="formToast" aria-live="polite"></div>
+
+      </form>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">✦ Portfolio — 2026</span>
+      <span class="footer-tagline">Designed with intention.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>

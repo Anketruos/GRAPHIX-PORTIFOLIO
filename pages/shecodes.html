@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SheCodes AASTU — Aster Teshome</title>
+  <link rel="icon" type="image/webp" href="../images/Favicon.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="../index.html" class="nav-logo">✦ Portfolio</a>
+    <div class="nav-links">
+      <a href="../index.html" class="nav-link active">Work</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <a href="../index.html" class="page-back fade-in">← Back to all work</a>
+    <p class="page-eyebrow fade-in">⟡ 01 — Category</p>
+    <h1 class="page-title fade-in">SheCodes<br /><em>AASTU Posters</em></h1>
+    <p class="page-desc fade-in">
+      Event branding, workshop posters, and social media graphics created for the SheCodes community at AASTU. Each piece was designed to inspire, celebrate, and connect the women in tech community.
+    </p>
+  </header>
+
+  <!-- GALLERY -->
+  <section class="gallery-section">
+    <div class="gallery-grid" id="gallery">
+
+      <div class="gallery-item fade-in" data-index="0"
+           data-title="Ada Lovelace — Inspiration Poster"
+           data-tag="Inspiration · Typography">
+        <img src="../images/S1 ada lovalence first female programer made to inspire girls for the club.webp"
+             alt="Ada Lovelace poster — first female programmer, made to inspire girls in the club"
+             loading="lazy" />
+        <div class="gallery-item-overlay">
+          <p class="gallery-item-title">Ada Lovelace — Inspiration Poster</p>
+          <span class="gallery-item-tag">Inspiration · Typography</span>
+        </div>
+      </div>
+
+      <div class="gallery-item fade-in" data-index="1"
+           data-title="Problem Solving Week"
+           data-tag="Event Poster · Social Media">
+        <img src="../images/S2 make for the she codes problem solving week.webp"
+             alt="SheCodes problem solving week poster"
+             loading="lazy" />
+        <div class="gallery-item-overlay">
+          <p class="gallery-item-title">Problem Solving Week</p>
+          <span class="gallery-item-tag">Event Poster · Social Media</span>
+        </div>
+      </div>
+
+      <div class="gallery-item fade-in" data-index="2"
+           data-title="100 Followers Milestone"
+           data-tag="Celebration · Social Media">
+        <img src="../images/S3 made to celebrate the 100 new followers of shecodes telegram channel.webp"
+             alt="100 new followers celebration poster for SheCodes Telegram channel"
+             loading="lazy" />
+        <div class="gallery-item-overlay">
+          <p class="gallery-item-title">100 Followers Milestone</p>
+          <span class="gallery-item-tag">Celebration · Social Media</span>
+        </div>
+      </div>
+
+      <div class="gallery-item fade-in" data-index="3"
+           data-title="Star of the Week"
+           data-tag="Recognition · Motivation">
+        <img src="../images/S4 made to motivate and cheris the girls that are learning int he club this is for the star of the week.webp"
+             alt="Star of the week poster to motivate and cherish girls learning in the club"
+             loading="lazy" />
+        <div class="gallery-item-overlay">
+          <p class="gallery-item-title">Star of the Week</p>
+          <span class="gallery-item-tag">Recognition · Motivation</span>
+        </div>
+      </div>
+
+      <div class="gallery-item fade-in" data-index="4"
+           data-title="Happy Easter"
+           data-tag="Holiday · Community">
+        <img src="../images/S5 this is made to say happy holiday saying happy easter to the memeber of shecode.webp"
+             alt="Happy Easter holiday greeting for SheCodes members"
+             loading="lazy" />
+        <div class="gallery-item-overlay">
+          <p class="gallery-item-title">Happy Easter</p>
+          <span class="gallery-item-tag">Holiday · Community</span>
+        </div>
+      </div>
+
+      <div class="gallery-item fade-in" data-index="5"
+           data-title="Closing Ceremony Poster"
+           data-tag="Event Branding · Poster">
+        <img src="../images/S6 this is made for the final program poster of the shecode closing ceremony.webp"
+             alt="Final program poster for the SheCodes closing ceremony"
+             loading="lazy" />
+        <div class="gallery-item-overlay">
+          <p class="gallery-item-title">Closing Ceremony Poster</p>
+          <span class="gallery-item-tag">Event Branding · Poster</span>
+        </div>
+      </div>
+
+      <div class="gallery-item fade-in" data-index="6"
+           data-title="Closing Ceremony Banner"
+           data-tag="Event Branding · Banner">
+        <img src="../images/S7 thisis the closing banner made for the shecodes closing ceremony.webp"
+             alt="Closing banner made for the SheCodes closing ceremony"
+             loading="lazy" />
+        <div class="gallery-item-overlay">
+          <p class="gallery-item-title">Closing Ceremony Banner</p>
+          <span class="gallery-item-tag">Event Branding · Banner</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#8592;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">&#8594;</button>
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">✦ Portfolio — 2026</span>
+      <span class="footer-tagline">Designed with intention.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="shecodes.js"></script>
+</body>
+</html>
