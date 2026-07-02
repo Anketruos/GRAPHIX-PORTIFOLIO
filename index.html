@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,9 +20,17 @@
       <a href="pages/about.html" class="nav-link">About</a>
       <a href="pages/contact.html" class="nav-link">Contact</a>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-right">
+      <!-- Theme toggle -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+        <span class="theme-toggle-icon theme-toggle-icon--dark">☽</span>
+        <span class="theme-toggle-icon theme-toggle-icon--light">☀</span>
+      </button>
+      <!-- Mobile hamburger -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <!-- HERO -->
@@ -63,9 +71,22 @@
         </div>
       </a>
 
-      <!-- Card 02 — Personal -->
+      <!-- Card 02 — Fellowship Graphics -->
+      <a href="pages/fellowship.html" class="card">
+        <div class="card-number">✝ 02</div>
+        <div class="card-content">
+          <h3 class="card-title">Fellowship Graphics</h3>
+          <p class="card-desc">Faith-driven visuals — program posters, scripture typography, countdown graphics, and devotional designs crafted for the fellowship community.</p>
+          <div class="card-meta">
+            <span class="card-count">17 pieces</span>
+            <span class="card-cta">Explore →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 03 — Personal -->
       <a href="pages/personal.html" class="card">
-        <div class="card-number">◈ 02</div>
+        <div class="card-number">◈ 03</div>
         <div class="card-content">
           <h3 class="card-title">Personal Projects</h3>
           <p class="card-desc">Experiments &amp; Explorations — experimental designs, personal branding concepts, and creative side projects born from pure curiosity.</p>

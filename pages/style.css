@@ -9,6 +9,7 @@
   padding: 0;
 }
 
+/* ── DARK MODE (default) ── */
 :root {
   --bg: #1a1214;
   --bg-2: #201618;
@@ -24,11 +25,35 @@
   --white-faint: rgba(247, 243, 245, 0.22);
   --accent: #E2C2B3;
   --accent-dark: #c9a08e;
+  --nav-scrolled-bg: rgba(26, 18, 20, 0.92);
+  --card-hover-bg: #2a1d1f;
+  --mobile-nav-bg: #1a1214;
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-mono: 'Space Mono', 'Courier New', monospace;
   --font-sans: 'Inter', system-ui, sans-serif;
   --radius: 2px;
   --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── LIGHT MODE ── */
+[data-theme="light"] {
+  --bg: #e8e0dd;
+  --bg-2: #dfd6d2;
+  --bg-card: #d6ccc8;
+  --border: rgba(64, 50, 52, 0.12);
+  --border-hover: rgba(202, 162, 150, 0.45);
+  --cream: #2a1a1c;
+  --blush: #CAA296;
+  --slate: #687477;
+  --dark: #e8e0dd;
+  --white: #2a1a1c;
+  --white-dim: rgba(42, 26, 28, 0.6);
+  --white-faint: rgba(42, 26, 28, 0.35);
+  --accent: #CAA296;
+  --accent-dark: #a8796a;
+  --nav-scrolled-bg: rgba(232, 224, 221, 0.92);
+  --card-hover-bg: #cec3be;
+  --mobile-nav-bg: #e8e0dd;
 }
 
 html {
@@ -80,7 +105,7 @@ img {
 }
 
 .nav.scrolled {
-  background: rgba(26, 18, 20, 0.92);
+  background: var(--nav-scrolled-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 1rem 3rem;
@@ -127,6 +152,13 @@ img {
 .nav-link:hover::after,
 .nav-link.active::after {
   width: 100%;
+}
+
+/* Right-side nav cluster: toggle + hamburger */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .nav-toggle {
@@ -316,7 +348,7 @@ img {
 }
 .card:hover {
   border-color: var(--border-hover);
-  background: #2a1d1f;
+  background: var(--card-hover-bg);
   transform: translateY(-4px);
 }
 .card:hover::before {
@@ -519,7 +551,7 @@ img {
   position: fixed;
   inset: 0;
   z-index: 200;
-  background: rgba(64, 50, 52, 0.92);
+  background: rgba(26, 18, 20, 0.95);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -773,13 +805,18 @@ img {
   .gallery-grid { grid-template-columns: 1fr; }
 }
 
+/* Smooth theme color transitions */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
 /* Mobile nav open state */
 .nav-open .nav-links {
   display: flex;
   flex-direction: column;
   position: fixed;
   inset: 0;
-  background: var(--bg);
+  background: var(--mobile-nav-bg);
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
@@ -797,6 +834,66 @@ img {
 .nav-open .nav-toggle span:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
 }
+
+/* Light mode footer */
+[data-theme="light"] .footer {
+  background: #d9cfc9;
+  border-top-color: rgba(64, 50, 52, 0.15);
+}
+
+/* =============================================
+   THEME TOGGLE BUTTON
+   ============================================= */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  width: 40px;
+  height: 22px;
+  border-radius: 999px;
+  position: relative;
+  padding: 0;
+  flex-shrink: 0;
+  transition: border-color var(--transition), background var(--transition);
+}
+.theme-toggle:hover {
+  border-color: var(--blush);
+}
+/* the sliding knob */
+.theme-toggle::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--blush);
+  transition: transform var(--transition), background var(--transition);
+}
+[data-theme="light"] .theme-toggle::after {
+  transform: translateX(18px);
+}
+/* icon inside — sun / moon drawn with box-shadow trick */
+.theme-toggle-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.55rem;
+  line-height: 1;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+.theme-toggle-icon--dark {
+  right: 5px;
+  opacity: 1;
+}
+.theme-toggle-icon--light {
+  left: 5px;
+  opacity: 0;
+}
+[data-theme="light"] .theme-toggle-icon--dark  { opacity: 0; }
+[data-theme="light"] .theme-toggle-icon--light { opacity: 1; }
 
 /* =============================================
    FADE-IN ANIMATION

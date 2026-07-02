@@ -149,7 +149,7 @@
 .orb-ring {
   position: absolute;
   border-radius: 50%;
-  border: 1px solid rgba(226, 194, 179, 0.18);
+  border: 1px solid rgba(226, 194, 179, 0.295);
 }
 .orb-ring--1 { width: 100%; height: 100%; }
 .orb-ring--2 { width: 72%;  height: 72%;  border-color: rgba(226, 194, 179, 0.12); }
@@ -176,6 +176,11 @@
   line-height: 1.6;
   opacity: 0.85;
 }
+
+/* ── Light mode orb — darker rings so they show against warm background ── */
+[data-theme="light"] .orb-ring--1 { border-color: rgba(154, 90, 66, 0.35); }
+[data-theme="light"] .orb-ring--2 { border-color: rgba(154, 90, 66, 0.22); }
+[data-theme="light"] .orb-ring--3 { border-color: rgba(154, 90, 66, 0.14); }
 
 /* ── Responsive ── */
 @media (max-width: 860px) {
