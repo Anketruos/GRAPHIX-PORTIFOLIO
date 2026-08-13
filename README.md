@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Aster Teshome — Graphix Portfolio ✦
 
 > Bold. Intentional. Unforgettable.
